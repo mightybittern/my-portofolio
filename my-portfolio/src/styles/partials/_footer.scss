@@ -1,0 +1,18 @@
+.footer {
+    text-align: center;
+    margin-top: 50px;
+
+    &__text {
+        font-size: 1em;
+        color: #7f8c8d;
+    }
+
+    &__link {
+        color: #3498db;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
