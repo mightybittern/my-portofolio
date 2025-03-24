@@ -16,6 +16,7 @@
     &__navigation {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         list-style-type: none;
         padding-top: 20px;
     }
@@ -27,5 +28,11 @@
         gap: 30px;
         list-style-type: none;
         text-transform: uppercase;
+    }
+
+    &__switch {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
     }
 }
