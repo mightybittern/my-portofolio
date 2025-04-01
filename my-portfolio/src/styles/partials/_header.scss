@@ -30,6 +30,34 @@
         text-transform: uppercase;
     }
 
+    &__menu-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+            .header__icon {
+                visibility: visible;
+                transform: translate(-50%, -120%);
+            }
+            // p {
+            //     visibility: hidden;
+            //     opacity: 0;
+            //     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            // }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+        transition: visibility 0.3s ease-in-out, transform .3s ease-in-out;
+    }
+
     &__switch {
         cursor: pointer;
         background-color: transparent;
