@@ -1,66 +1,126 @@
 .header {
     text-align: center;
-    margin-bottom: 30px;
-    
-    &__title {
-        font-size: 3em;
-        margin-bottom: 10px;
-        color: #2c3e50;
-    }
+    margin-bottom: 32px;
+}
 
-    &__subtitle {
-        font-size: 1.2em;
-        color: #7f8c8d;
-    }
-
-    &__navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style-type: none;
-        padding-top: 20px;
-    }
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover)) 10;
 
     &__menu {
         display: flex;
-        align-content: center;
-        justify-content: center;
-        gap: 30px;
+        gap: 15px;
         list-style-type: none;
+        padding: 0;
+        margin: 0;
         text-transform: uppercase;
     }
 
-    &__menu-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__link {
+        color: var(--color-text-primary);
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+        font-size: 12px;
         position: relative;
+        padding: 8px 12px;
 
-        &:hover {
-            .header__icon {
-                visibility: visible;
-                transform: translate(-50%, -120%);
+        &::before,
+        &::after {
+            content: '';
+            height: 14px;
+            width: 14px;
+            position: absolute;
+            transition: all .35s ease;
+            opacity: 0;
+        }
+
+        &::before {
+            right: 0;
+            top: 0;
+            border-top: 3px solid var(--color-accent);
+            border-right: 3px solid var(--color-accent);
+            transform: translate(-100%, 50%);
+        }
+
+        &:after {
+            left: 0;
+            bottom: 0;
+            border-bottom: 3px solid var(--color-accent-hover);
+            border-left: 3px solid var(--color-accent-hover);
+            transform: translate(100%, -50%)
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--color-text-primary-hover);
+
+            &::before,
+            &::after {
+                transform: translate(0, 0);
+                opacity: 1;
             }
-            // p {
-            //     visibility: hidden;
-            //     opacity: 0;
-            //     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            // }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 375px;
+    margin-inline: auto;
+    position: relative;
+
+    &__wrap {
+        --shift: 140px;
+        position: absolute;
+        top: 92px;
+        left: calc(50% - var(--shift));
+        text-align: left;
+        width: 150px;
+    }
+
+    &__image-wrap {
+        width: 340px;
+        height: 340px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 0 20px var(--color-accent-hover-alt, rgba(0, 0, 0, 0.05));
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 94px;
+            width: 250px;
+            height: auto;
+            clip-path: polygon(40% 0, 94% 0, 80% 39%, 52% 110%, 50% 100%, 0 100%);
         }
     }
 
-    &__icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        visibility: hidden;
-        transition: visibility 0.3s ease-in-out, transform .3s ease-in-out;
+    &__title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: var(--color-accent);
+        text-transform: uppercase;
     }
 
-    &__switch {
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
+    &__subtitle {
+        font-size: 24px;
+        color: var(--color-text-secondary);
+        margin-bottom: 4px;
+    }
+
+    &__description {
+        color: var(--color-text-secondary);
+        font-style: italic;
+        margin-bottom: 16px;
     }
 }

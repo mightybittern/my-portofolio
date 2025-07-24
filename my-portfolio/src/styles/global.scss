@@ -1,0 +1,59 @@
+@use './normalize.css' as *;
+@use 'partials/header' as *;
+@use 'partials/about' as *;
+@use 'partials/projects' as *;
+@use 'partials/contact' as *;
+@use 'partials/footer' as *;
+@use './color-palette' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --container-width: 340px;
+    --container-gap: 10px;
+    width: calc(var(--container-width) + var(--container-gap) * 2);
+    margin: auto;
+    padding-inline: 10px;
+    background: var(--color-background-alt);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px var(--color-accent-hover-alt, rgba(0, 0, 0, 0.05));
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.section {
+    padding: 20px;
+}
