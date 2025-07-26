@@ -1,18 +1,21 @@
 .footer {
+    display: grid;
+    gap: 20px;
     text-align: center;
-    margin-top: 50px;
+    padding-block: 20px;
 
-    &__text {
-        font-size: 1em;
-        color: #7f8c8d;
+    &__socials {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
     }
 
-    &__link {
-        color: #3498db;
-        text-decoration: none;
-        
+    &__social-link {
+        color: var(--color-social-icon);
+        transition: color 0.2s;
+
         &:hover {
-            text-decoration: underline;
+            color: var(--color-social-icon-hover);
         }
     }
 }

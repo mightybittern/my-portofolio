@@ -195,6 +195,9 @@ button,
 
 /* Interactive
    ========================================================================== */
+section {
+    display: grid;
+}
 
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.

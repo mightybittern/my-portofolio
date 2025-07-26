@@ -1,14 +1,10 @@
 .about {
-    margin-bottom: 50px;
+    display: grid;
+    gap: 20px;
 
-    &__title {
-        font-size: 32px;
-        margin-bottom: 15px;
-        color: #2c3e50;
+    &__content {
+        display: grid;
+        gap: 16px;
     }
 
-    &__text {
-        font-size: 19px;
-        color: #7f8c8d;
-    }
 }
